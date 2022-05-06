@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de produtos</title>
+</head>
+<body>{% for item in produtos %}
+    <form class="boxaluno" action="/lista/aluno/{{item.id}}" method="post">
+        {% endfor %}
+        <div>
+            <label> Nome produto </label>
+            {% for item in produtos %}
+            <input type="text" id="produto" value="{{item.produto}}" readonly>
+            {% endfor %}
+        </div>
+        <div>
+            <label> Categoria </label>
+            {% for item in produtos %}
+            <input type="text" id="categoria" value="{{item.categoria}}" readonly>
+            {% endfor %}
+        </div>
+        <div>
+            <label> Endereço </label>
+            {% for item in produtos %}
+            <input type="text" id="preco" value="{{item.preco}}" readonly>
+            {% endfor %}
+        </div>
+    </form>
+</body>
+</html>
